@@ -31,21 +31,21 @@ body, p, h1, h2, h3, h4, h5 {
 //     color: #A11E22;
 //     text-decoration: none;
 // }
-// .dl-horizontal {
-//   dt {
-//     float: left;
-//     text-align: right;
-//     width: 110px;
-//     color: #33CCFF;
-//   }
-//   dd {
-//     margin-left: 150px;
-//   }
-// }
-//
-// th {
-//     color: #FF9900;
-// }
-// td {
-//     color: white;
-// }
+.dl-horizontal {
+  dt {
+    float: left;
+    text-align: right;
+    width: 110px;
+    color: #33CCFF;
+  }
+  dd {
+    margin-left: 150px;
+  }
+}
+
+th {
+    color: #FF9900;
+}
+td {
+    color: black;
+}

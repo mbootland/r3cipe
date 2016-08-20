@@ -1,14 +1,18 @@
-<%= render layout: '/shared/widget', locals: { title: 'Users' } do %>
+<div class='page-header'>
+  Users
+</div>
 
-
-  <div class='row form-group'>
-    <div class='col-md-2 pull-right'>
-      <%= link_to new_user_path, class: 'btn btn-primary' do %>
-        <span class='glyphicon glyphicon-plus'></span>
-        Add User
-      <% end %>
-    </div>
+<div class='row form-group'>
+  <div class='col-md-2 pull-left'>
+    <%= link_to new_user_path, class: 'btn btn-primary' do %>
+      <span class='glyphicon glyphicon-plus'></span>
+      Add User
+    <% end %>
   </div>
+</div>
+
+
+<%= render layout: '/shared/widget', locals: { title: '' } do %>
 
   <div class='table-responsive'>
     <table class='table table-striped table-bordered table-hover'>
