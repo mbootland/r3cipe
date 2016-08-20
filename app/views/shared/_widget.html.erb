@@ -1,0 +1,11 @@
+<% if defined? anchor %><a name='<%= anchor %>'></a><% end %>
+<div class='widget<%= " #{ widget_class }" if defined? widget_class %>'>
+  <div class='widget_header'>
+    <span class='title'><%= title.html_safe %></span>
+    <%= render title_partial if defined?(title_partial) %>
+  </div>
+
+  <div class='widget_content clearfix'>
+    <%= yield %>
+  </div>
+</div>

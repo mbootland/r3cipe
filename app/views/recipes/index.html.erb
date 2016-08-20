@@ -1,0 +1,24 @@
+<div class='page-header'>
+  Recipes
+</div>
+
+<div>
+  <%= link_to new_recipe_path, class: 'btn btn-primary' do %>
+    <span class='glyphicon glyphicon-plus'></span>
+    Add Recipe
+  <% end %>
+</div>
+
+
+<% @recipes.each do |recipe| %>
+  <div>
+    <%= render layout: '/shared/widget', locals: { title: (link_to recipe.title, recipe) } do %>
+
+      <body>
+        <%= recipe.body %>
+        <%= recipe.picture %>
+      </body>
+
+    <% end %>
+  </div>
+<% end %>

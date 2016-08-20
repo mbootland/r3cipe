@@ -1,13 +1,42 @@
-<nav class='nav-bar'>
+<nav class='navbar navbar-default'>
+  <div class='container'>
+    <div class='navbar-header'>
+      <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar'>
+        <span class='sr-only'>Toggle navigation</span>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+      </button>
+      <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+    </div>
+    <div id='navbar' class='collapse navbar-collapse'>
+      <ul class='nav navbar-nav pull-right'>
+
+        <li class='<%= request.path.split('/')[1] == 'recipes' ? 'active' : nil %>'>
+          <%= link_to 'Recipes', recipes_path %>
+        </li>
+
+        <li class='<%= request.path.split('/')[1] == 'users' ? 'active' : nil %>'>
+          <%= link_to 'Users', users_path %>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <nav class='nav-bar'>
   <div class='container'>
     <div class='navbar-header'>
       <a class='navbar-brand logo'>R3cipe!</a>
     </div>
     <div>
-      <%= link_to 'Home', root_path, class: "navi" %>
       <%= link_to 'Users', users_path, class: "navi" %>
-      <!-- <%#= link_to 'Users', users_path, class: "navi" %> -->
-      <!-- <#%= link_to 'News', news_index_path, %> -->
+      <%= link_to 'Recipes', recipes_path, class: "navi" %>
+      <%= link_to 'Home', root_path, class: "navi" %>
+      <%#= link_to 'Users', users_path, class: "navi" %>
+      <#%= link_to 'News', news_index_path, %>
     </div>
   </div>
-</nav>
+</nav> -->

@@ -1,0 +1,13 @@
+<%= render layout: '/shared/widget', locals: { title: (link_to @recipe.title, @recipe) } do %>
+
+<dl class='dl-horizontal'>
+  <dt>Title:</dt>
+  <dd><%= @recipe.title %></dd>
+
+  <dt>Body:</dt>
+  <dd><%= @recipe.body %></dd>
+</dl>
+
+  <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+  <%= link_to 'Back', recipes_path %>
+<% end %>
