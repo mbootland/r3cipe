@@ -61,6 +61,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def do_login
+    user = User.find_by username: params[:username]
+
+    if user and user.authenticate params[:password]
+      session
+    else
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

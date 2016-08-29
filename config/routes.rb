@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   resources :recipes
-  resources :users
+  resources :users do
+    collection do
+      get 'login'
+      get 'logout'
+      post 'do_login'
+    end
+  end
   get 'home/index'
 
   root 'home#index'
